@@ -1,0 +1,25 @@
+.carousel-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel {
+    display: flex;
+    gap: 20px; /* Espacio entre las imágenes */
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    scroll-snap-type: x mandatory;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch; /* Para el desplazamiento suave en iOS */
+}
+
+.carousel li {
+    scroll-snap-align: start;
+}
+
+.carousel img {
+    max-width: 100%;
+    height: auto;
+}
