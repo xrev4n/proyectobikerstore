@@ -3,12 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Casco</title>
+    <title>Biker's Store - Ropa y Accesorios para Motos</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="index.css">
+    <style>
+        /* Agrega un margen superior para evitar que la barra de navegación oculte el contenido */
+        body {
+            padding-top: 70px; /* Altura de la barra de navegación */
+        }
+    </style>
 </head>
 <body>
-
+    <!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">¡Bienvenido! Ingresa tu nombre</h5>
+            </div>
+            <div class="modal-body">
+                <form id="nameForm">
+                    <div class="form-group">
+                        <label for="exampleInputName">Nombre:</label>
+                        <input type="text" class="form-control" id="exampleInputName" aria-describedby="nameHelp">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
     <!-- Inicio de la barra de navegación -->
     <nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
         <!-- Este es el logo o nombre de la página web -->
@@ -22,16 +45,13 @@
             <ul class="navbar-nav">
                 <!-- Cada 'li' es un enlace en la barra de navegación -->
                 <li class="nav-item active">
-                    <a class="nav-link text-white" href="#">Inicio</a>
-                </li>
-                <li class="nav-item active">
                     <a class="nav-link text-white" href="casco.html">Cascos</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link text-white" href="indumentaria.html">Indumentaria</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="accesorio.html">Repuestos</a>
+                    <a class="nav-link text-white" href="accesorio.html">Accesorios</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link text-white" href="neumatico.html">Neumáticos</a>
@@ -40,10 +60,10 @@
                     <a class="nav-link text-white" href="moto.html">Motos</a>
                 </li>
             </ul>
+            <span class="navbar-text text-white ml-auto" id="welcomeMessage"></span>
         </div>
     </nav>
     <!-- Fin de la barra de navegación -->
-
 
     <div class="container mt-5">
         <div class="row">
@@ -179,9 +199,49 @@
       </div>
   </div>
 
-  <!-- jQuery, Popper.js, y Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.bundle.min.js"></script>
-
+    <!-- jQuery, Popper.js, y Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Función para obtener el nombre del usuario desde el almacenamiento local
+        function getUserName() {
+            return localStorage.getItem('userName');
+        }
+    
+        // Función para establecer el nombre del usuario en el almacenamiento local
+        function setUserName(userName) {
+            localStorage.setItem('userName', userName);
+        }
+    
+        // Función para mostrar el modal si el nombre del usuario no está almacenado
+        function showWelcomeModal() {
+            if (!getUserName()) {
+                $('#exampleModal').modal('show');
+            }
+        }
+    
+        // Función para mostrar el nombre del usuario en la barra de navegación
+        function showWelcomeMessage() {
+            var userName = getUserName();
+            if (userName) {
+                $('#welcomeMessage').text('Bienvenido ' + userName);
+            }
+        }
+    
+        $(document).ready(function() {
+            showWelcomeModal();
+            showWelcomeMessage();
+    
+            // Maneja el evento de enviar el formulario
+            $('#nameForm').submit(function(e) {
+                e.preventDefault();
+                var userName = $('#exampleInputName').val();
+                setUserName(userName);
+                showWelcomeMessage();
+                $('#exampleModal').modal('hide');
+            });
+        });
+    </script>
+    <script src="welcomeMessage.js"></script>
 </body>
 </html>
