@@ -3,61 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Motos</title>
+    <title>Prueba</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" type="text/css" href="index.css">
+
     <style>
         /* Estilo adicional para las imágenes de las tarjetas */
         .card-img-top {
             height: 250px; /* Ajusta la altura de las imágenes según tus necesidades */
             object-fit: cover; /* Ajusta el tamaño de la imagen sin deformarla */
         }
-        body {
-            padding-top: 50px; /* Altura de la barra de navegación */
-        }
+        
     </style>
 </head>
 <body>
-
-        <!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">¡Bienvenido! Ingresa tu nombre</h5>
-            </div>
-            <div class="modal-body">
-                <form id="nameForm">
-                    <div class="form-group">
-                        <label for="exampleInputName">Nombre:</label>
-                        <input type="text" class="form-control" id="exampleInputName" aria-describedby="nameHelp">
-                    </div>
-                    <button type="submit" class="btn btn-primary">Enviar</button>
-                </form>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Modal del Carrito -->
-<div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="cartModalLabel">Carrito de Compras</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body" id="cartModalBody">
-                <!-- Aquí se mostrarán los productos del carrito -->
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-                <!-- Agrega aquí cualquier otro botón o funcionalidad adicional -->
-            </div>
-        </div>
-    </div>
-</div>
 
      <!-- Inicio de la barra de navegación -->
      <nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
@@ -161,73 +120,7 @@
         </div>
     </div>
 
-    <div class="container mt-5">
-      <div class="row d-flex align-items-stretch">
-          <!-- Primera columna para la primera tarjeta -->
-          <div class="col-md-4">
-              <!-- Card -->
-              <div class="card h-100">
-                  <!-- Imagen de la card -->
-                  <img src="IMG\Ninja H2R.png" class="card-img-top" alt="Imagen del producto">
-                  <div class="card-body">
-                      <!-- Nombre de la card -->
-                      <h5 class="card-title">Kawasaki Ninja H2R</h5>
-                      <!-- Descripción de la card -->
-                      <p class="card-text">Superar los límites de la ingeniería y el rendimiento es una de las pocas motocicletas</p>
-                      <!-- Precio de la card -->
-                      <p class="card-price">Precio: $49.999.990</p>
-                      <!-- Disponibilidad de la card -->
-                      <p class="card-availability">Disponibilidad: En stock</p>
-                      <!-- Botón para agregar al carrito -->
-                      <button class="btn btn-primary card-add-to-cart-btn">Agregar al carrito</button>
-                  </div>
-              </div>
-          </div>
-          
-          <!-- Segunda columna para la segunda tarjeta -->
-          <div class="col-md-4">
-              <!-- Card -->
-              <div class="card h-100">
-                  <!-- Imagen de la card -->
-                  <img src="IMG\Yamaha MT10.jpg" class="card-img-top" alt="Imagen del producto">
-                  <div class="card-body">
-                      <!-- Nombre de la card -->
-                      <h5 class="card-title">Yamaha MT-10</h5>
-                      <!-- Descripción de la card -->
-                      <p class="card-text">Siendo tope de gama en la familia MT, este modelo ofrece una experiencia única y lleva al extremo las emociones.</p>
-                      <!-- Precio de la card -->
-                      <p class="card-price">Precio: $15.490.000</p>
-                      <!-- Disponibilidad de la card -->
-                      <p class="card-availability">Disponibilidad: En stock</p>
-                      <!-- Botón para agregar al carrito -->
-                      <button class="btn btn-primary card-add-to-cart-btn">Agregar al carrito</button>
-                  </div>
-              </div>
-          </div>
-
-          <!-- Tercera columna para la tercera tarjeta -->
-          <div class="col-md-4">
-            <!-- Card -->
-            <div class="card h-100">
-                <!-- Imagen de la card -->
-                <img src="IMG\resize_1642263513_1 (1).jpeg" class="card-img-top" alt="Imagen del producto">
-                <div class="card-body">
-                    <!-- Nombre de la card -->
-                    <h5 class="card-title">INDIAN® SCOUT BOBBER®</h5>
-                    <!-- Descripción de la card -->
-                    <p class="card-text">Grandes cosas vienen para los que las persiguen. Reducida a lo esencial y totalmente oscurecida</p>
-                    <!-- Precio de la card -->
-                    <p class="card-price">Precio: $14.990.000</p>
-                    <!-- Disponibilidad de la card -->
-                    <p class="card-availability">Disponibilidad: En stock</p>
-                    <!-- Botón para agregar al carrito -->
-                    <button class="btn btn-primary card-add-to-cart-btn">Agregar al carrito</button>
-                </div>
-            </div>
-        </div>
-      </div>
-  </div>
-
+    
       <!-- jQuery, Popper.js, y Bootstrap JS -->
       <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.bundle.min.js"></script>

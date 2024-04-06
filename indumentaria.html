@@ -5,8 +5,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Indumentaria</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <style>
+        /* Estilo adicional para las imágenes de las tarjetas */
+        .card-img-top {
+            height: 250px; /* Ajusta la altura de las imágenes según tus necesidades */
+            object-fit: cover; /* Ajusta el tamaño de la imagen sin deformarla */
+        }
+        body {
+            padding-top: 50px; /* Altura de la barra de navegación */
+        }
+    </style>
 </head>
 <body>
+
+        <!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">¡Bienvenido! Ingresa tu nombre</h5>
+            </div>
+            <div class="modal-body">
+                <form id="nameForm">
+                    <div class="form-group">
+                        <label for="exampleInputName">Nombre:</label>
+                        <input type="text" class="form-control" id="exampleInputName" aria-describedby="nameHelp">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal del Carrito -->
+<div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="cartModalLabel">Carrito de Compras</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body" id="cartModalBody">
+                <!-- Aquí se mostrarán los productos del carrito -->
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                <!-- Agrega aquí cualquier otro botón o funcionalidad adicional -->
+            </div>
+        </div>
+    </div>
+</div>
 
      <!-- Inicio de la barra de navegación -->
      <nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
@@ -44,11 +95,11 @@
     <!-- Fin de la barra de navegación -->
     
     <div class="container mt-5">
-        <div class="row">
+        <div class="row d-flex align-items-stretch">
             <!-- Primera columna para la primera tarjeta -->
             <div class="col-md-4">
                 <!-- Card -->
-                <div class="card">
+                <div class="card h-100">
                     <!-- Imagen de la card -->
                     <img src="IMG\OCTANE AVENTADOR (1).png" class="card-img-top" alt="Imagen del producto">
                     <div class="card-body">
@@ -69,7 +120,7 @@
             <!-- Segunda columna para la segunda tarjeta -->
             <div class="col-md-4">
                 <!-- Card -->
-                <div class="card">
+                <div class="card h-100">
                     <!-- Imagen de la card -->
                     <img src="IMG\OCTANE TERESSA II (1).jpg" class="card-img-top" alt="Imagen del producto">
                     <div class="card-body">
@@ -90,7 +141,7 @@
             <!-- Tercera columna para la tercera tarjeta -->
             <div class="col-md-4">
               <!-- Card -->
-              <div class="card">
+              <div class="card h-100">
                   <!-- Imagen de la card -->
                   <img src="IMG\CLOVER SAVANA-3 WP (1).jpg" class="card-img-top" alt="Imagen del producto">
                   <div class="card-body">
@@ -111,11 +162,11 @@
     </div>
 
     <div class="container mt-5">
-      <div class="row">
+      <div class="row d-flex align-items-stretch">
           <!-- Primera columna para la primera tarjeta -->
           <div class="col-md-4">
               <!-- Card -->
-              <div class="card">
+              <div class="card h-100">
                   <!-- Imagen de la card -->
                   <img src="IMG\ALPINESTARS GUANTE CELER V2 (1).jpg" class="card-img-top" alt="Imagen del producto">
                   <div class="card-body">
@@ -136,7 +187,7 @@
           <!-- Segunda columna para la segunda tarjeta -->
           <div class="col-md-4">
               <!-- Card -->
-              <div class="card">
+              <div class="card h-100">
                   <!-- Imagen de la card -->
                   <img src="IMG\DAINESE MIG 3 UNISEX (1).jpg" class="card-img-top" alt="Imagen del producto">
                   <div class="card-body">
@@ -157,7 +208,7 @@
           <!-- Tercera columna para la tercera tarjeta -->
           <div class="col-md-4">
             <!-- Card -->
-            <div class="card">
+            <div class="card h-100">
                 <!-- Imagen de la card -->
                 <img src="IMG\CLOVER KVS (1).jpg" class="card-img-top" alt="Imagen del producto">
                 <div class="card-body">

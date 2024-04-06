@@ -1,4 +1,20 @@
-body{
-
+body {
     background-color: whitesmoke;
 }
+
+.navbar-nav .nav-link {
+    margin-right: 20px; /* Espaciado entre los elementos de navegación */
+}
+
+.card-img-top:hover {
+    transform: scale(1.1); /* Ajusta el valor según sea necesario */
+    transition: transform 0.3s ease; /* Agrega una transición suave */
+}
+
+.container {
+    margin-top: 80px; /* Ajusta este valor según sea necesario */
+}
+
+
+
+

@@ -6,8 +6,60 @@
     <title>Casco</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        /* Estilo adicional para las imágenes de las tarjetas */
+        .card-img-top {
+            height: 250px; /* Ajusta la altura de las imágenes según tus necesidades */
+            object-fit: cover; /* Ajusta el tamaño de la imagen sin deformarla */
+        }
+        /* Agrega un margen superior para evitar que la barra de navegación oculte el contenido */
+        body {
+            padding-top: 50px; /* Altura de la barra de navegación */
+        }
+    </style>
 </head>
 <body>
+
+        <!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">¡Bienvenido! Ingresa tu nombre</h5>
+            </div>
+            <div class="modal-body">
+                <form id="nameForm">
+                    <div class="form-group">
+                        <label for="exampleInputName">Nombre:</label>
+                        <input type="text" class="form-control" id="exampleInputName" aria-describedby="nameHelp">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal del Carrito -->
+<div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="cartModalLabel">Carrito de Compras</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body" id="cartModalBody">
+                <!-- Aquí se mostrarán los productos del carrito -->
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                <!-- Agrega aquí cualquier otro botón o funcionalidad adicional -->
+            </div>
+        </div>
+    </div>
+</div>
 
     <!-- Inicio de la barra de navegación -->
     <nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
@@ -22,7 +74,7 @@
             <ul class="navbar-nav">
                 <!-- Cada 'li' es un enlace en la barra de navegación -->
                 <li class="nav-item active">
-                    <a class="nav-link text-white" href="#">Inicio</a>
+                    <a class="nav-link text-white" href="index.html">Inicio</a>
                 </li>
                 <li class="nav-item active">
                     <a class="nav-link text-white" href="casco.html">Cascos</a>
@@ -46,11 +98,11 @@
 
 
     <div class="container mt-5">
-        <div class="row">
+        <div class="row d-flex align-items-stretch">
             <!-- Primera columna para la primera tarjeta -->
             <div class="col-md-4">
                 <!-- Card -->
-                <div class="card">
+                <div class="card h-100">
                     <!-- Imagen de la card -->
                     <img src="IMG\MT Helmets - Revenge 2.jpg" class="card-img-top" alt="Imagen del producto">
                     <div class="card-body">
@@ -71,7 +123,7 @@
             <!-- Segunda columna para la segunda tarjeta -->
             <div class="col-md-4">
                 <!-- Card -->
-                <div class="card">
+                <div class="card h-100">
                     <!-- Imagen de la card -->
                     <img src="IMG\HJC C10 MONOCOLOR.jpg" class="card-img-top" alt="Imagen del producto">
                     <div class="card-body">
@@ -92,7 +144,7 @@
             <!-- Tercera columna para la tercera tarjeta -->
             <div class="col-md-4">
               <!-- Card -->
-              <div class="card">
+              <div class="card h-100">
                   <!-- Imagen de la card -->
                   <img src="IMG\HJC CS-15 MYLO.jpg" class="card-img-top" alt="Imagen del producto">
                   <div class="card-body">
@@ -113,11 +165,11 @@
     </div>
 
     <div class="container mt-5">
-      <div class="row">
+      <div class="row d-flex align-items-stretch">
           <!-- Primera columna para la primera tarjeta -->
           <div class="col-md-4">
               <!-- Card -->
-              <div class="card">
+              <div class="card h-100">
                   <!-- Imagen de la card -->
                   <img src="IMG\NEXX_Morado (2).jpg" class="card-img-top" alt="Imagen del producto">
                   <div class="card-body">
@@ -138,7 +190,7 @@
           <!-- Segunda columna para la segunda tarjeta -->
           <div class="col-md-4">
               <!-- Card -->
-              <div class="card">
+              <div class="card h-100">
                   <!-- Imagen de la card -->
                   <img src="IMG\image (1).jpg" class="card-img-top" alt="Imagen del producto">
                   <div class="card-body">
@@ -159,7 +211,7 @@
           <!-- Tercera columna para la tercera tarjeta -->
           <div class="col-md-4">
             <!-- Card -->
-            <div class="card">
+            <div class="card h-100">
                 <!-- Imagen de la card -->
                 <img src="IMG\SHOEI X-SPIRIT III AERODYNE (1).jpg" class="card-img-top" alt="Imagen del producto">
                 <div class="card-body">
@@ -183,5 +235,6 @@
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.bundle.min.js"></script>
 
+ 
 </body>
 </html>
