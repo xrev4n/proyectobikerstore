@@ -45,6 +45,26 @@
     </nav>
     <!-- Fin de la barra de navegación -->
 
+    <!-- Contenedor para el contenido dinámico -->
+    <div id="contenido" class="container mt-5">
+        <!-- Aquí se cargará el contenido dinámicamente -->
+    </div>
+
+    <!-- JavaScript para cargar contenido dinámico -->
+    <script>
+        // Función para cargar contenido dinámico
+        function cargarContenido(seccion) {
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    document.getElementById("contenido").innerHTML = this.responseText;
+                }
+            };
+            xhttp.open("GET", seccion + ".html", true);
+            xhttp.send();
+        }
+    </script>
+
     <div class="container mt-5">
         <div class="row">
           <div class="col-md-4">
