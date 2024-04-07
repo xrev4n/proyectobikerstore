@@ -3,127 +3,211 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prueba</title>
+    <title>Biker's Store - Ropa y Accesorios para Motos</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="index.css">
-
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    
     <style>
-        /* Estilo adicional para las imágenes de las tarjetas */
-        .card-img-top {
-            height: 250px; /* Ajusta la altura de las imágenes según tus necesidades */
-            object-fit: cover; /* Ajusta el tamaño de la imagen sin deformarla */
+        /* Estilo personalizado para el carrusel */
+        .custom-carousel-item img {
+            width: 500px; /* Ancho deseado */
+            height: 500px; /* Alto deseado */
+            object-fit: cover; /* Para asegurar que la imagen cubra todo el contenedor */
         }
+
+        body {
+        background-image: url('IMG/3925b437c092d0f177395540101bf539.png'); /* Ruta de tu imagen de fondo */
+        background-size: cover; /* Para cubrir todo el fondo */
+        background-position: center; /* Para centrar la imagen */
+        background-attachment: fixed; /* Para fijar el fondo y que no se desplace con el contenido */
         
+    }
+    #carouselExampleIndicators {
+            padding-top: 50px; /* Espacio entre el carrusel y la barra de navegación */
+            padding-left: 50px;
+            padding-right: 50px;
+        }
     </style>
 </head>
 <body>
 
-     <!-- Inicio de la barra de navegación -->
-     <nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
-        <!-- Este es el logo o nombre de la página web -->
-        <a class="navbar-brand text-white" href="#">Biker Store</a>
-        <!-- Este botón aparece cuando la pantalla es pequeña (responsive design) -->
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <!-- Aquí están los enlaces de la barra de navegación -->
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-                <!-- Cada 'li' es un enlace en la barra de navegación -->
-                <li class="nav-item active">
-                    <a class="nav-link text-white" href="index.html">Inicio</a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link text-white" href="casco.html">Cascos</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-white" href="indumentaria.html">Indumentaria</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-white" href="accesorio.html">Repuestos</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-white" href="neumatico.html">Neumáticos</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-white" href="moto.html">Motos</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-    <!-- Fin de la barra de navegación -->
-    
-    <div class="container mt-5">
-        <div class="row d-flex align-items-stretch">
-            <!-- Primera columna para la primera tarjeta -->
-            <div class="col-md-4">
-                <!-- Card -->
-                <div class="card h-100">
-                    <!-- Imagen de la card -->
-                    <img src="IMG\GSX 150.png" class="card-img-top" alt="Imagen del producto">
-                    <div class="card-body">
-                        <!-- Nombre de la card -->
-                        <h5 class="card-title">Suzuki GSX-R 150 ABS</h5>
-                        <!-- Descripción de la card -->
-                        <p class="card-text">La GSX-R 150 ahora viene con frenos ABS DOBLE CANAL y lleva a revolucionar el mercado de las 150 cm3.</p>
-                        <!-- Precio de la card -->
-                        <p class="card-price">Precio: $3.599.990</p>
-                        <!-- Disponibilidad de la card -->
-                        <p class="card-availability">Disponibilidad: En stock</p>
-                        <!-- Botón para agregar al carrito -->
-                        <button class="btn btn-primary card-add-to-cart-btn">Agregar al carrito</button>
-                    </div>
-                </div>
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">¡Bienvenido! Ingresa tu nombre</h5>
             </div>
-            
-            <!-- Segunda columna para la segunda tarjeta -->
-            <div class="col-md-4">
-                <!-- Card -->
-                <div class="card h-100">
-                    <!-- Imagen de la card -->
-                    <img src="IMG\CB190REPSOL-600x600 (1).png" class="card-img-top" alt="Imagen del producto">
-                    <div class="card-body">
-                        <!-- Nombre de la card -->
-                        <h5 class="card-title">Honda CB 190R Repsol</h5>
-                        <!-- Descripción de la card -->
-                        <p class="card-text">Es una chaqueta diseñada especialmente para mujeres.</p>
-                        <!-- Precio de la card -->
-                        <p class="card-price">Precio: $2.599.900</p>
-                        <!-- Disponibilidad de la card -->
-                        <p class="card-availability">Disponibilidad: En stock</p>
-                        <!-- Botón para agregar al carrito -->
-                        <button class="btn btn-primary card-add-to-cart-btn">Agregar al carrito</button>
+            <div class="modal-body">
+                <form id="nameForm">
+                    <div class="form-group">
+                        <label for="exampleInputName">Nombre:</label>
+                        <input type="text" class="form-control" id="exampleInputName" aria-describedby="nameHelp">
                     </div>
-                </div>
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                </form>
             </div>
-
-            <!-- Tercera columna para la tercera tarjeta -->
-            <div class="col-md-4">
-              <!-- Card -->
-              <div class="card h-100">
-                  <!-- Imagen de la card -->
-                  <img src="IMG\images1.jpeg" class="card-img-top" alt="Imagen del producto">
-                  <div class="card-body">
-                      <!-- Nombre de la card -->
-                      <h5 class="card-title">Honda Dio 2024</h5>
-                      <!-- Descripción de la card -->
-                      <p class="card-text">La Honda DIO te sorprenderá con todo su estilo, adaptándose a espíritus jóvenes, alegres y modernos.</p>
-                      <!-- Precio de la card -->
-                      <p class="card-price">Precio: $1.199.900</p>
-                      <!-- Disponibilidad de la card -->
-                      <p class="card-availability">Disponibilidad: En stock</p>
-                      <!-- Botón para agregar al carrito -->
-                      <button class="btn btn-primary card-add-to-cart-btn">Agregar al carrito</button>
-                  </div>
-              </div>
-          </div>
         </div>
     </div>
+</div>
 
-    
-      <!-- jQuery, Popper.js, y Bootstrap JS -->
-      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Modal del Carrito -->
+<div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="cartModalLabel">Carrito de Compras</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body" id="cartModalBody">
+                <!-- Aquí se mostrarán los productos del carrito -->
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                <!-- Agrega aquí cualquier otro botón o funcionalidad adicional -->
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Inicio de la barra de navegación -->
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+    <!-- Este es el logo o nombre de la página web -->
+    <a class="navbar-brand text-white" href="#">Biker Store</a>
+    <!-- Este botón aparece cuando la pantalla es pequeña (responsive design) -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <!-- Aquí están los enlaces de la barra de navegación -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <!-- Cada 'li' es un enlace en la barra de navegación -->
+            <li class="nav-item active">
+                <a class="nav-link text-white" href="index.html">Inicio</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link text-white" href="casco.html">Cascos</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-white" href="indumentaria.html">Indumentaria</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-white" href="accesorio.html">Accesorios</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-white" href="neumatico.html">Neumaticos</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-white" href="moto.html">Motos</a>
+            </li>
+        </ul>
+        <span class="navbar-text text-white ml-auto" id="welcomeMessage"></span>
+        <span class="navbar-text text-white ml-auto mr-3" id="cartIcon">
+            <i class="fa fa-shopping-cart"></i>
+        </span>
+    </div>
+</nav>
+<!-- Fin de la barra de navegación -->
+
+<!-- Inicio del carrusel -->
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+    </ol>
+    <div class="carousel-inner">
+        <div class="carousel-item active custom-carousel-item">
+            <img src="IMG/bornil-amin-oVEhraDIBPg-unsplash.jpg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item custom-carousel-item">
+            <img src="IMG/pexels-photo-18213308.jpeg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item custom-carousel-item">
+            <img src="https://via.placeholder.com/500x500" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item custom-carousel-item">
+            <img src="https://via.placeholder.com/500x500" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item custom-carousel-item">
+            <img src="https://via.placeholder.com/500x500" class="d-block w-100" alt="...">
+        </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
+<!-- Fin del carrusel -->
+
+<!-- Sección de "Acerca de nosotros" -->
+<section id="aboutUs" class="container mt-5">
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <h2>Acerca de Nosotros</h2>
+            <p>Somos Biker's Store, una tienda especializada en ofrecer ropa y accesorios para motociclistas. Nos esforzamos por brindar productos de alta calidad y un excelente servicio al cliente.</p>
+            <p>Siempre estamos buscando expandir nuestra selección de productos para satisfacer las necesidades de nuestros clientes. ¡Explora nuestra tienda en línea y encuentra todo lo que necesitas para tu próxima aventura en moto!</p>
+        </div>
+    </div>
+</section>
+
+<!-- Resto de tu contenido HTML -->
+
+<!-- jQuery, Popper.js, y Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+    // Función para obtener el nombre del usuario desde el almacenamiento local
+    function getUserName() {
+        return localStorage.getItem('userName');
+    }
+
+    // Función para establecer el nombre del usuario en el almacenamiento local
+    function setUserName(userName) {
+        localStorage.setItem('userName', userName);
+    }
+
+    // Función para mostrar el modal si el nombre del usuario no está almacenado
+    function showWelcomeModal() {
+        if (!getUserName()) {
+            $('#exampleModal').modal('show');
+        }
+    }
+
+    // Función para mostrar el nombre del usuario en la barra de navegación
+    function showWelcomeMessage() {
+        var userName = getUserName();
+        if (userName) {
+            $('#welcomeMessage').text('Bienvenido ' + userName);
+        }
+    }
+
+    $(document).ready(function() {
+        showWelcomeModal();
+        showWelcomeMessage();
+
+        // Maneja el evento de enviar el formulario
+        $('#nameForm').submit(function(e) {
+            e.preventDefault();
+            var userName = $('#exampleInputName').val();
+            setUserName(userName);
+            showWelcomeMessage();
+            $('#exampleModal').modal('hide');
+        });
+    });
+</script>
+<script src="welcomeMessage.js"></script>
+<script src="cart.js"></script>
 
 </body>
 </html>

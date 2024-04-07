@@ -15,6 +15,27 @@ body {
     margin-top: 80px; /* Ajusta este valor según sea necesario */
 }
 
+.card {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
 
+.card:hover {
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-add-to-cart-btn {
+    transition: background-color 0.3s ease;
+}
+
+.card-add-to-cart-btn:hover {
+    background-color: #28a745; /* Cambia el color a verde cuando se pasa el ratón por encima */
+    border-color: #28a745; /* Cambia el color del borde a verde */
+}
+
+.modal-body form {
+    max-width: 300px; /* Ancho máximo del formulario */
+    margin: auto; /* Centra el formulario dentro del modal */
+}
 
 
