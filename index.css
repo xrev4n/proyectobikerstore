@@ -38,4 +38,9 @@ body {
     margin: auto; /* Centra el formulario dentro del modal */
 }
 
+.nav-item.active {
+    background-color: #007bff; /* Azul */
+}
+
+
 
