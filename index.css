@@ -1,4 +1,167 @@
-body{
-
+body {
+    padding-top: 50px; /* Altura de la barra de navegación */
+    background-image: url('IMG/nordwood-themes-R53t-Tg6J4c-unsplash.jpg'); /* Ruta de tu imagen de fondo */
+    background-size: cover; /* Para cubrir todo el fondo */
+    background-position: center; /* Para centrar la imagen */
+    background-attachment: fixed; /* Para fijar el fondo y que no se desplace con el contenido */
     background-color: whitesmoke;
 }
+
+.navbar-nav .nav-link {
+    margin-right: 50px; /* Espaciado entre los elementos de navegación */
+}
+
+.card-img-top:hover {
+    transform: scale(1.1); /* Ajusta el valor según sea necesario */
+    transition: transform 0.3s ease; /* Agrega una transición suave */
+}
+
+.container {
+    margin-top: 80px; /* Ajusta este valor según sea necesario */
+}
+
+.card {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+    
+}
+
+.card:hover {
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-add-to-cart-btn {
+    transition: background-color 0.3s ease;
+    box-shadow: 0px 3px 8px #0008;
+}
+
+.card-add-to-cart-btn:hover {
+    background-color: #28a745; /* Cambia el color a verde cuando se pasa el ratón por encima */
+    border-color: #28a745; /* Cambia el color del borde a verde */
+
+}
+
+.modal-body form {
+    max-width: 300px; /* Ancho máximo del formulario */
+    margin: auto; /* Centra el formulario dentro del modal */
+}
+
+/* .nav-item.active {
+    background-color: #007bff; /* Azul */
+/* } */
+
+/* Estilo para aplicar descuento */
+.discount-image {
+    position: relative;
+}
+
+/* Estilo para el texto de descuento */
+.discount-text {
+    position: absolute;
+    top: 220px;
+    right: 10px;
+    background-color: #ff0000; /* Color de fondo del texto */
+    color: #ffffff; /* Color del texto */
+    padding: 5px 10px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+/* Estilo para el precio con descuento */
+.discount-price {
+    color: #ff0000; /* Color del texto */
+    margin-left: 10px;
+
+}
+
+/* Estilo adicional para las imágenes de las tarjetas */
+.card-img-top {
+    height: 300px; /* Altura fija para las imágenes */
+    object-fit: cover; /* Ajusta el tamaño de la imagen sin deformarla */
+}
+body {
+    padding-top: 50px; /* Altura de la barra de navegación */
+    background-image: url('IMG/nordwood-themes-R53t-Tg6J4c-unsplash.jpg'); /* Ruta de tu imagen de fondo */
+    background-size: cover; /* Para cubrir todo el fondo */
+    background-position: center; /* Para centrar la imagen */
+    background-attachment: fixed; /* Para fijar el fondo y que no se desplace con el contenido */
+    background-color: whitesmoke;
+}
+h1 {
+    text-align: center;
+    padding-top: 30px;
+    text-shadow: 0px 1px 2px #0008;
+}
+/* ------------------------------------------------ */
+/* tipografia titulo cosa carta */
+.card-title {
+    font-family:Verdana;
+    font-size: 20px;
+    font-weight: bold; 
+    text-align: center; 
+}
+/* cambia el boton de ir a pagar */
+.go-to-checkout-btn {
+    background-color: #007bff; 
+    color: #ffffff; 
+    border: none; 
+    box-shadow: 0px 1px 2px #0008;
+}
+/* cambia el boton de eliminar (carrito) */
+.remove-from-cart-btn {
+    background-color: #dc3545; 
+    color: #ffffff; 
+    border: none; 
+    box-shadow: 0px 1px 2px #0008;
+}
+
+/* Estilo para el fondo con gradiente */
+        .navbar-dark {
+        background-image: linear-gradient(to right, #141D37, #344A8F);
+        color: #ffffff !important;
+    }
+
+    /* Estilo para el enlace activo */
+    .navbar-nav .nav-item.active .nav-link {
+        color: #ffffff;
+        background-color: #3c6fa5; 
+        border-radius: 30% 5% 30% 5%;
+    }
+
+    /* Estilo para los enlaces en general */
+    .navbar-nav .nav-item .nav-link {
+        color: #ffffff !important;
+    }
+
+    /* Estilo para el botón del menú desplegable */
+    .navbar-toggler-icon {
+        background-color: #ffffff !important;
+    }
+
+    /* Estilo para el icono del carrito */
+    #cartIcon {
+        cursor: pointer;
+    }
+
+    /* Estilo para el texto en la parte derecha */
+    #welcomeMessage {
+        font-weight: bold;
+    }
+
+    /* Estilo para el ícono del carrito */
+    #cartIcon .fa-shopping-cart {
+        font-size: 24px;
+    }
+
+
+
+/* Estilos para el texto dentro del div */
+#Direccion p {
+    margin-bottom: 10px; /* Espaciado inferior */
+    line-height: 1.6; /*Altura de línea */
+}
+
+
+
+

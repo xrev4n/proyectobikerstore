@@ -3,13 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Indumentaria</title>
+    <title>Biker Store - Indumentaria</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    
 </head>
 <body>
 
-    <!-- Inicio de la barra de navegación -->
-    <nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
+        <!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">¡Bienvenido! Ingresa tu nombre</h5>
+            </div>
+            <div class="modal-body">
+                <form id="nameForm">
+                    <div class="form-group">
+                        <label for="exampleInputName">Nombre:</label>
+                        <input type="text" class="form-control" id="exampleInputName" aria-describedby="nameHelp">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal del Carrito -->
+<div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="cartModalLabel">Carrito de Compras</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body" id="cartModalBody">
+                <!-- Aquí se mostrarán los productos del carrito -->
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                <!-- Agrega aquí cualquier otro botón o funcionalidad adicional -->
+            </div>
+        </div>
+    </div>
+</div>
+
+     <!-- Inicio de la barra de navegación -->
+     <nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
         <!-- Este es el logo o nombre de la página web -->
         <a class="navbar-brand text-white" href="#">Biker Store</a>
         <!-- Este botón aparece cuando la pantalla es pequeña (responsive design) -->
@@ -20,14 +63,17 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <!-- Cada 'li' es un enlace en la barra de navegación -->
-                <li class="nav-item active">
+                <li class="nav-item ">
+                    <a class="nav-link text-white" href="index.html">Inicio</a>
+                </li>
+                <li class="nav-item ">
                     <a class="nav-link text-white" href="casco.html">Cascos</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item active">
                     <a class="nav-link text-white" href="indumentaria.html">Indumentaria</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="accesorio.html">Accesorios</a>
+                    <a class="nav-link text-white" href="accesorio.html">Repuestos</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link text-white" href="neumatico.html">Neumáticos</a>
@@ -37,16 +83,22 @@
                 </li>
             </ul>
             <span class="navbar-text text-white ml-auto" id="welcomeMessage"></span>
+            <span class="navbar-text text-white ml-auto mr-3" id="cartIcon">
+                <i class="fa fa-shopping-cart"></i>
+            </span>
         </div>
     </nav>
     <!-- Fin de la barra de navegación -->
+
+    <!-- Título dentro del cuerpo -->
+    <h1>Indumentaria</h1>
     
     <div class="container mt-5">
-        <div class="row">
+        <div class="row d-flex align-items-stretch">
             <!-- Primera columna para la primera tarjeta -->
             <div class="col-md-4">
                 <!-- Card -->
-                <div class="card">
+                <div class="card h-100">
                     <!-- Imagen de la card -->
                     <img src="IMG\OCTANE AVENTADOR (1).png" class="card-img-top" alt="Imagen del producto">
                     <div class="card-body">
@@ -67,7 +119,7 @@
             <!-- Segunda columna para la segunda tarjeta -->
             <div class="col-md-4">
                 <!-- Card -->
-                <div class="card">
+                <div class="card h-100">
                     <!-- Imagen de la card -->
                     <img src="IMG\OCTANE TERESSA II (1).jpg" class="card-img-top" alt="Imagen del producto">
                     <div class="card-body">
@@ -88,16 +140,19 @@
             <!-- Tercera columna para la tercera tarjeta -->
             <div class="col-md-4">
               <!-- Card -->
-              <div class="card">
+              <div class="card h-100">
                   <!-- Imagen de la card -->
                   <img src="IMG\CLOVER SAVANA-3 WP (1).jpg" class="card-img-top" alt="Imagen del producto">
+                  <div class="discount-image">
+                    <p class="discount-text">20% Descuento</p>
+                </div>
                   <div class="card-body">
                       <!-- Nombre de la card -->
                       <h5 class="card-title">CLOVER SAVANA-3 WP</h5>
                       <!-- Descripción de la card -->
                       <p class="card-text">La chaqueta Clover Savana-3 WP es una de las más versátiles de la marca.</p>
                       <!-- Precio de la card -->
-                      <p class="card-price">Precio: $299.900</p>
+                      <p class="card-price"><del><strong>Precio: $299.900</strong></del> <span class="discount-price"><strong>Ahora: $239.920</strong></span></p>
                       <!-- Disponibilidad de la card -->
                       <p class="card-availability">Disponibilidad: En stock</p>
                       <!-- Botón para agregar al carrito -->
@@ -109,11 +164,11 @@
     </div>
 
     <div class="container mt-5">
-      <div class="row">
+      <div class="row d-flex align-items-stretch">
           <!-- Primera columna para la primera tarjeta -->
           <div class="col-md-4">
               <!-- Card -->
-              <div class="card">
+              <div class="card h-100">
                   <!-- Imagen de la card -->
                   <img src="IMG\ALPINESTARS GUANTE CELER V2 (1).jpg" class="card-img-top" alt="Imagen del producto">
                   <div class="card-body">
@@ -134,7 +189,7 @@
           <!-- Segunda columna para la segunda tarjeta -->
           <div class="col-md-4">
               <!-- Card -->
-              <div class="card">
+              <div class="card h-100">
                   <!-- Imagen de la card -->
                   <img src="IMG\DAINESE MIG 3 UNISEX (1).jpg" class="card-img-top" alt="Imagen del producto">
                   <div class="card-body">
@@ -155,7 +210,7 @@
           <!-- Tercera columna para la tercera tarjeta -->
           <div class="col-md-4">
             <!-- Card -->
-            <div class="card">
+            <div class="card h-100">
                 <!-- Imagen de la card -->
                 <img src="IMG\CLOVER KVS (1).jpg" class="card-img-top" alt="Imagen del producto">
                 <div class="card-body">
@@ -175,11 +230,65 @@
       </div>
   </div>
 
+  <section id="aboutUs" class="container mt-5">
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <h2>¿Necesita Ayuda? Llámenos al (2) 2666.0690</h2>
+            <p>Somos Biker's Store, una tienda especializada en ofrecer ropa y accesorios para motociclistas. Nos esforzamos por brindar productos de alta calidad y un excelente servicio al cliente.</p>
+            <p>BikerStore™ 
+                 LAS TRANQUERAS 58</p>
+            <p>BikerStore™
+                © Todos los derechos reservados</p>
+        </div>
+    </div>
+</section>
+
       <!-- jQuery, Popper.js, y Bootstrap JS -->
       <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.bundle.min.js"></script>
-      
-      <script src="welcomeMessage.js"></script>
+
+      <script>
+        // Función para obtener el nombre del usuario desde el almacenamiento local
+        function getUserName() {
+            return localStorage.getItem('userName');
+        }
+    
+        // Función para establecer el nombre del usuario en el almacenamiento local
+        function setUserName(userName) {
+            localStorage.setItem('userName', userName);
+        }
+    
+        // Función para mostrar el modal si el nombre del usuario no está almacenado
+        function showWelcomeModal() {
+            if (!getUserName()) {
+                $('#exampleModal').modal('show');
+            }
+        }
+    
+        // Función para mostrar el nombre del usuario en la barra de navegación
+        function showWelcomeMessage() {
+            var userName = getUserName();
+            if (userName) {
+                $('#welcomeMessage').text('Bienvenido ' + userName);
+            }
+        }
+    
+        $(document).ready(function() {
+            showWelcomeModal();
+            showWelcomeMessage();
+    
+            // Maneja el evento de enviar el formulario
+            $('#nameForm').submit(function(e) {
+                e.preventDefault();
+                var userName = $('#exampleInputName').val();
+                setUserName(userName);
+                showWelcomeMessage();
+                $('#exampleModal').modal('hide');
+            });
+        });
+    </script>
+    <script src="welcomeMessage.js"></script>
+    <script src="cart.js"></script>
 
 </body>
 </html>
